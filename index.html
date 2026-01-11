@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Macarena Lemos - Ventas & Customer Success Educativo</title>
+    <title>Macarena Lemos - Asistente para Academias Online</title>
     <style>
         * {
             margin: 0;
@@ -12,663 +12,525 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             line-height: 1.6;
-            color: #1a2332;
-            background: #ffffff;
+            color: #2d3748;
+            background: #f7fafc;
         }
 
         .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        /* HERO SECTION */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0f2847 0%, #1a3a52 100%);
-            color: white;
-            padding: 60px 40px;
-            position: relative;
-        }
-
-        .hero-content {
             max-width: 900px;
-            text-align: left;
+            margin: 0 auto;
+            padding: 0 20px;
         }
 
-        .hero-label {
-            font-size: 0.85em;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: #4fd1c5;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .hero h1 {
-            font-size: 4.5em;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 30px;
+        /* HEADER */
+        header {
+            background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
             color: white;
+            padding: 80px 20px;
+            text-align: center;
         }
 
-        .hero h1 .highlight {
-            background: linear-gradient(135deg, #4fd1c5 0%, #63b3ed 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+        header h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 15px;
         }
 
-        .hero-subtitle {
-            font-size: 1.4em;
-            line-height: 1.6;
-            color: #e2e8f0;
-            margin-bottom: 40px;
-            font-weight: 300;
+        header .subtitle {
+            font-size: 1.5em;
+            font-weight: 400;
+            margin-bottom: 30px;
+            opacity: 0.95;
         }
 
-        .hero-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 15px;
-            margin-top: 20px;
+        .location {
+            font-size: 1em;
+            margin-bottom: 10px;
+            opacity: 0.9;
         }
 
-        .hero-cta a {
+        .contact-header {
+            margin-top: 30px;
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .contact-header a {
+            color: white;
             text-decoration: none;
-            padding: 15px 35px;
-            border-radius: 8px;
+            padding: 12px 28px;
+            border: 2px solid white;
+            border-radius: 6px;
             font-weight: 600;
             transition: all 0.3s;
-            font-size: 1em;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .btn-primary {
-            background: linear-gradient(135deg, #4fd1c5 0%, #63b3ed 100%);
-            color: #0f2847;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(79, 209, 197, 0.4);
-        }
-
-        .btn-secondary {
-            border: 2px solid #4fd1c5;
-            color: #4fd1c5;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(79, 209, 197, 0.1);
-        }
-
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: #4fd1c5;
-            font-size: 0.85em;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* MANIFESTO SECTION */
-        .manifesto {
+        .contact-header a:hover {
             background: white;
-            padding: 100px 40px;
-            text-align: center;
+            color: #2c5282;
         }
 
-        .manifesto-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .manifesto h2 {
-            font-size: 2.8em;
-            line-height: 1.4;
-            color: #0f2847;
-            margin-bottom: 30px;
-            font-weight: 600;
-        }
-
-        .manifesto .accent {
-            color: #4fd1c5;
-            font-weight: 700;
-        }
-
-        .manifesto p {
-            font-size: 1.2em;
-            color: #4a5568;
-            line-height: 1.8;
-            margin-bottom: 20px;
-        }
-
-        .manifesto .signature {
-            margin-top: 40px;
-            font-size: 1em;
-            color: #718096;
-            font-style: italic;
-        }
-
-        /* METRICS SECTION */
-        .metrics {
-            background: #f7fafc;
-            padding: 80px 40px;
-        }
-
-        .metrics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .metric-card {
-            text-align: center;
-            padding: 40px 30px;
-        }
-
-        .metric-card .icon {
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-
-        .metric-card .number {
-            font-size: 2em;
-            font-weight: 700;
-            color: #0f2847;
-            margin-bottom: 10px;
-        }
-
-        .metric-card .label {
-            font-size: 1em;
-            color: #4a5568;
-            line-height: 1.5;
-        }
-
-        /* CONTENT SECTIONS */
+        /* SECTIONS */
         section {
-            padding: 80px 40px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        section.dark {
-            background: #0f2847;
-            color: white;
-            max-width: 100%;
-            padding: 100px 40px;
-        }
-
-        section.dark h2 {
-            color: white;
-        }
-
-        section.dark .section-intro {
-            color: #cbd5e0;
-        }
-
-        h2 {
-            font-size: 2.5em;
-            color: #0f2847;
-            margin-bottom: 20px;
-            font-weight: 700;
-        }
-
-        .section-intro {
-            font-size: 1.15em;
-            color: #4a5568;
-            margin-bottom: 50px;
-            line-height: 1.7;
-            max-width: 700px;
-        }
-
-        /* EXPERIENCE */
-        .experience-card {
             background: white;
-            border-left: 4px solid #4fd1c5;
-            padding: 40px;
-            margin-bottom: 40px;
-            border-radius: 0 8px 8px 0;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin: 40px auto;
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
         }
 
-        .experience-header {
+        section h2 {
+            font-size: 2em;
+            color: #2c5282;
             margin-bottom: 25px;
+            font-weight: 700;
+            border-bottom: 3px solid #4299e1;
+            padding-bottom: 15px;
         }
 
-        .experience-header .company {
-            color: #4fd1c5;
-            font-weight: 600;
+        section p {
             font-size: 1.1em;
-            margin-bottom: 8px;
-        }
-
-        .experience-header h3 {
-            font-size: 1.8em;
-            color: #0f2847;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .experience-header .period {
-            color: #718096;
-            font-size: 0.95em;
-        }
-
-        .experience-description {
-            margin-bottom: 30px;
             line-height: 1.8;
             color: #4a5568;
-            font-size: 1.05em;
+            margin-bottom: 20px;
         }
 
-        .responsibilities {
+        /* ABOUT */
+        .about-text {
+            font-size: 1.15em;
+            line-height: 1.9;
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
+            gap: 30px;
             margin-top: 30px;
         }
 
-        .responsibility-item {
-            padding: 20px;
-            background: #f7fafc;
+        .skill-category {
+            background: #edf2f7;
+            padding: 30px;
             border-radius: 8px;
-            border-left: 3px solid #4fd1c5;
+            border-left: 4px solid #4299e1;
         }
 
-        .responsibility-item h4 {
-            color: #0f2847;
-            font-size: 1.1em;
-            margin-bottom: 12px;
-            font-weight: 600;
-        }
-
-        .responsibility-item ul {
-            list-style: none;
-        }
-
-        .responsibility-item li {
-            padding: 6px 0;
-            color: #4a5568;
-            position: relative;
-            padding-left: 20px;
-            font-size: 0.95em;
-        }
-
-        .responsibility-item li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #4fd1c5;
-            font-weight: bold;
-        }
-
-        /* SKILLS */
-        .skills-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin-top: 40px;
-        }
-
-        .skill-card {
-            background: #1a3a52;
-            padding: 35px;
-            border-radius: 12px;
-            border: 1px solid rgba(79, 209, 197, 0.2);
-        }
-
-        .skill-card h3 {
-            color: #4fd1c5;
+        .skill-category h3 {
+            color: #2c5282;
             font-size: 1.3em;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             font-weight: 600;
         }
 
-        .skill-card ul {
+        .skill-category ul {
             list-style: none;
         }
 
-        .skill-card li {
-            padding: 10px 0;
-            color: #cbd5e0;
+        .skill-category li {
+            padding: 8px 0;
+            color: #4a5568;
             position: relative;
             padding-left: 25px;
             font-size: 1em;
         }
 
-        .skill-card li:before {
+        .skill-category li:before {
             content: "✓";
             position: absolute;
             left: 0;
-            color: #4fd1c5;
+            color: #4299e1;
             font-weight: bold;
+            font-size: 1.2em;
         }
 
-        /* STRENGTHS */
-        .strengths-grid {
-            display: grid;
-            gap: 20px;
-            margin-top: 40px;
-        }
-
-        .strength-item {
-            background: white;
-            padding: 25px 30px;
+        /* EXPERIENCE */
+        .experience-box {
+            background: #edf2f7;
+            padding: 35px;
             border-radius: 8px;
-            border-left: 4px solid #d69e2e;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            color: #2d3748;
-            font-size: 1.05em;
-            line-height: 1.6;
+            border-left: 5px solid #4299e1;
+            margin-top: 25px;
         }
 
-        /* CTA SECTION */
-        .cta-section {
-            background: linear-gradient(135deg, #0f2847 0%, #1a3a52 100%);
-            color: white;
-            text-align: center;
-            padding: 100px 40px;
+        .experience-box .company {
+            color: #2c5282;
+            font-weight: 700;
+            font-size: 1.2em;
+            margin-bottom: 8px;
         }
 
-        .cta-section h2 {
-            color: white;
-            font-size: 2.5em;
-            margin-bottom: 25px;
+        .experience-box .role {
+            font-size: 1.4em;
+            font-weight: 600;
+            color: #1a202c;
+            margin-bottom: 8px;
         }
 
-        .cta-section p {
-            font-size: 1.3em;
-            line-height: 1.7;
-            color: #e2e8f0;
+        .experience-box .period {
+            color: #718096;
+            font-size: 0.95em;
             margin-bottom: 20px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .cta-section .highlight-text {
-            color: #4fd1c5;
+        .experience-box .description {
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .experience-box .highlight-box {
+            background: white;
+            padding: 25px;
+            border-radius: 6px;
+            margin: 20px 0;
+            border-left: 3px solid #48bb78;
+        }
+
+        .experience-box .highlight-box strong {
+            color: #2c5282;
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1.05em;
+        }
+
+        .experience-box h4 {
+            color: #2c5282;
+            font-size: 1.15em;
+            margin: 25px 0 15px 0;
             font-weight: 600;
         }
 
-        .contact-info-cta {
-            margin-top: 40px;
+        /* TOOLS */
+        .tools-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .tools-list span {
+            background: #2c5282;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.95em;
+            font-weight: 500;
+        }
+
+        /* CHARACTERISTICS */
+        .characteristics-grid {
+            display: grid;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        .characteristic-item {
+            background: #f7fafc;
+            padding: 20px 25px;
+            border-radius: 6px;
+            border-left: 4px solid #48bb78;
+            font-size: 1.05em;
+            color: #2d3748;
+        }
+
+        /* AVAILABILITY */
+        .availability-box {
+            background: linear-gradient(135deg, #2c5282 0%, #2b6cb0 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .availability-box h3 {
+            font-size: 1.8em;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .availability-box .items {
             display: flex;
             justify-content: center;
-            gap: 30px;
+            gap: 40px;
             flex-wrap: wrap;
+            margin-top: 20px;
             font-size: 1.1em;
         }
 
-        .contact-info-cta a {
-            color: #4fd1c5;
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .contact-info-cta a:hover {
-            color: #63b3ed;
+        .availability-box .items div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
         }
 
         /* FOOTER */
         footer {
-            background: #0a1929;
-            color: #718096;
+            background: #1a202c;
+            color: #a0aec0;
             text-align: center;
             padding: 40px 20px;
-            font-size: 0.9em;
+            margin-top: 60px;
         }
 
-        footer p {
-            margin: 5px 0;
+        footer .contact-footer {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            font-size: 1.05em;
+        }
+
+        footer .contact-footer a {
+            color: #4299e1;
+            text-decoration: none;
+        }
+
+        footer .contact-footer a:hover {
+            color: #63b3ed;
         }
 
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.8em;
+            header h1 {
+                font-size: 2.5em;
             }
-
-            .hero-subtitle {
-                font-size: 1.1em;
-            }
-
-            .manifesto h2 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 2em;
+            
+            header .subtitle {
+                font-size: 1.2em;
             }
 
             section {
-                padding: 60px 25px;
+                padding: 35px 25px;
             }
 
-            .hero-cta {
+            section h2 {
+                font-size: 1.6em;
+            }
+
+            .contact-header {
                 flex-direction: column;
             }
 
-            .hero-cta a {
+            .contact-header a {
                 width: 100%;
-                text-align: center;
+                justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .availability-box .items {
+                flex-direction: column;
+                gap: 15px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- HERO -->
-    <div class="hero">
-        <div class="hero-content">
-            <div class="hero-label">Ventas & Customer Success Educativo</div>
-            <h1>MACARENA<br><span class="highlight">LEMOS</span></h1>
-            <p class="hero-subtitle">
-                Mientras muchos venden cursos,<br>
-                yo acompaño decisiones.
-            </p>
-            <div class="hero-cta">
-                <a href="mailto:Lemosolmedomacarena3@gmail.com" class="btn-primary">Hablemos</a>
-                <a href="#experiencia" class="btn-secondary">Ver experiencia</a>
-            </div>
+    <!-- HEADER -->
+    <header>
+        <h1>MACARENA LEMOS</h1>
+        <div class="subtitle">Asistente para Academias Online</div>
+        <div class="location">📍 Tandil, Buenos Aires, Argentina | 💻 Trabajo remoto</div>
+        <div class="contact-header">
+            <a href="mailto:Lemosolmedomacarena3@gmail.com">📧 Email</a>
+            <a href="https://walink.co/p2np40">💬 WhatsApp</a>
         </div>
-        <div class="scroll-indicator">↓ Scroll</div>
-    </div>
+    </header>
 
-    <!-- MANIFESTO -->
-    <div class="manifesto">
-        <div class="manifesto-content">
-            <h2>No vendo promesas. Vendo <span class="accent">procesos claros</span>, expectativas reales y acompañamiento continuo.</h2>
-            <p>
-                Trabajo todos los días con personas que quieren formarse, crecer y profesionalizarse, y mi rol es acompañarlas desde el primer mensaje hasta que el proceso realmente funcione.
+    <div class="container">
+        <!-- SOBRE MÍ -->
+        <section>
+            <h2>Sobre mí</h2>
+            <p class="about-text">
+                Trabajé <strong>2 años y medio</strong> en una academia online de estética gestionando la atención al cliente, soporte técnico básico y operaciones diarias.
             </p>
-            <p class="signature">
-                Ventas, atención y soporte educativo en una sola persona.
+            <p class="about-text">
+                Busco nuevas oportunidades en academias o negocios educativos online donde necesiten alguien que maneje la comunicación con alumnos, responda consultas y ayude con la parte operativa.
             </p>
-        </div>
-    </div>
+        </section>
 
-    <!-- METRICS -->
-    <div class="metrics">
-        <div class="metrics-grid">
-            <div class="metric-card">
-                <div class="icon">📊</div>
-                <div class="number">+400</div>
-                <div class="label">Alumnas acompañadas en procesos formativos completos</div>
-            </div>
-            <div class="metric-card">
-                <div class="icon">🎓</div>
-                <div class="number">Ventas complejas</div>
-                <div class="label">Cursos cortos, formaciones largas y especializaciones profesionales</div>
-            </div>
-            <div class="metric-card">
-                <div class="icon">💬</div>
-                <div class="number">Atención multicanal</div>
-                <div class="label">WhatsApp · Instagram · Plataforma educativa</div>
-            </div>
-            <div class="metric-card">
-                <div class="icon">🚀</div>
-                <div class="number">Educación online</div>
-                <div class="label">Academias y formaciones digitales profesionales</div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PERFIL -->
-    <section>
-        <h2>Perfil Profesional</h2>
-        <p class="section-intro">
-            Soy especialista en ventas y atención comercial en academias online. Entiendo cómo funciona una academia virtual desde adentro: no solo ventas, sino retención, soporte académico, gestión operativa y comunicación estratégica con alumnas.
-        </p>
-        <p class="section-intro">
-            <strong>Escucho, ordeno, filtro y convierto interés en compromiso real.</strong> En educación online, vender no termina cuando se paga, sino cuando la persona avanza.
-        </p>
-    </section>
-
-    <!-- EXPERIENCIA -->
-    <section id="experiencia">
-        <h2>Experiencia</h2>
-        <div class="experience-card">
-            <div class="experience-header">
-                <div class="company">Academia de Estética Profesional Andrea del Valle Lemos</div>
-                <h3>Responsable de Ventas y Atención Comercial</h3>
-                <div class="period">📅 Actualidad</div>
-            </div>
-            <p class="experience-description">
-                Formo parte del equipo desde la construcción del proyecto. Me encargo de la atención diaria de interesados, la venta de formaciones online y el acompañamiento posterior de alumnas durante todo su proceso educativo.
-            </p>
-            <p class="experience-description">
-                Gestiono consultas, objeciones, inscripciones, accesos, soporte académico y seguimiento, entendiendo que en educación online <strong>vender no termina cuando se paga, sino cuando la persona avanza.</strong>
-            </p>
-
-            <div class="responsibilities">
-                <div class="responsibility-item">
-                    <h4>Ventas & Conversión</h4>
+        <!-- QUÉ SÉ HACER -->
+        <section>
+            <h2>¿Qué sé hacer?</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Atención al Cliente</h3>
                     <ul>
-                        <li>Venta consultiva de formaciones</li>
-                        <li>Atención personalizada multicanal</li>
-                        <li>Conversión de leads en alumnas</li>
-                        <li>Manejo de objeciones reales</li>
-                        <li>Cierre de ventas complejas</li>
+                        <li>Responder consultas por WhatsApp, Instagram, email</li>
+                        <li>Resolver dudas sobre cursos, precios, modalidades</li>
+                        <li>Atender reclamos y situaciones conflictivas</li>
+                        <li>Seguimiento a alumnos durante el curso</li>
                     </ul>
                 </div>
-                <div class="responsibility-item">
-                    <h4>Customer Success</h4>
+
+                <div class="skill-category">
+                    <h3>Redes Sociales</h3>
                     <ul>
-                        <li>Acompañamiento post venta</li>
-                        <li>Retención y soporte académico</li>
-                        <li>Seguimiento personalizado</li>
-                        <li>Reducción de abandono</li>
-                        <li>Gestión de expectativas</li>
+                        <li>Responder mensajes directos y comentarios</li>
+                        <li>Atención de consultas comerciales por Instagram/Facebook</li>
+                        <li>Uso de WhatsApp Business</li>
                     </ul>
                 </div>
-                <div class="responsibility-item">
-                    <h4>Gestión Operativa</h4>
+
+                <div class="skill-category">
+                    <h3>Soporte Operativo</h3>
                     <ul>
-                        <li>Plataformas educativas</li>
-                        <li>WordPress / WooCommerce</li>
-                        <li>LearnDash (cursos y accesos)</li>
-                        <li>Coordinación con equipo</li>
-                        <li>Organización de procesos</li>
+                        <li>Gestión de accesos a plataformas educativas</li>
+                        <li>Altas y bajas de alumnos</li>
+                        <li>Resolución de problemas técnicos básicos</li>
+                        <li>Carga de materiales (videos, PDFs)</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- HABILIDADES -->
-    <section class="dark">
-        <div class="container">
-            <h2>Habilidades</h2>
-            <p class="section-intro">
-                Combinación de criterio comercial, contención humana y visión estratégica del negocio educativo online.
+        <!-- HERRAMIENTAS -->
+        <section>
+            <h2>Herramientas que manejo</h2>
+            <div class="tools-list">
+                <span>Google Workspace</span>
+                <span>Gmail</span>
+                <span>Drive</span>
+                <span>Docs</span>
+                <span>Sheets</span>
+                <span>WhatsApp Business</span>
+                <span>WordPress</span>
+                <span>WooCommerce</span>
+                <span>LearnDash</span>
+                <span>Zoom</span>
+                <span>Instagram</span>
+                <span>Facebook</span>
+            </div>
+            <p style="margin-top: 25px; font-weight: 600; color: #2c5282;">
+                Lo que aprendo rápido:
             </p>
-            <div class="skills-container">
-                <div class="skill-card">
-                    <h3>Ventas & Atención</h3>
-                    <ul>
-                        <li>Venta consultiva</li>
-                        <li>Cierre de ventas educativas</li>
-                        <li>Atención al cliente empática</li>
-                        <li>Manejo de objeciones</li>
-                        <li>Seguimiento personalizado</li>
-                        <li>Customer Success</li>
+            <ul style="margin-top: 15px; margin-left: 25px; color: #4a5568; font-size: 1.05em;">
+                <li>Nuevas plataformas educativas (Kajabi, Hotmart, Teachable, etc.)</li>
+                <li>CRMs y sistemas de tickets</li>
+                <li>Procesos específicos de cada academia</li>
+            </ul>
+        </section>
+
+        <!-- EXPERIENCIA -->
+        <section>
+            <h2>Experiencia</h2>
+            <div class="experience-box">
+                <div class="company">Academia de Estética Andrea Lemos</div>
+                <div class="role">Asistente de Atención y Operaciones</div>
+                <div class="period">Enero 2022 - Enero 2025 (2.5 años)</div>
+                
+                <div class="description">
+                    <ul style="margin-left: 25px; line-height: 1.9;">
+                        <li>Atención diaria a consultas de alumnas por WhatsApp e Instagram</li>
+                        <li>Gestión de inscripciones, accesos y seguimiento</li>
+                        <li>Soporte técnico básico (problemas de acceso, pagos, plataforma)</li>
+                        <li>Moderación de clases en vivo por Zoom</li>
+                        <li>Carga de contenido en plataforma educativa</li>
                     </ul>
                 </div>
-                <div class="skill-card">
-                    <h3>Educación Online</h3>
-                    <ul>
-                        <li>Academias virtuales</li>
-                        <li>Cursos asincrónicos y en vivo</li>
-                        <li>Formaciones largas</li>
-                        <li>Soporte académico</li>
-                        <li>Retención de alumnas</li>
-                        <li>Comunicación educativa</li>
-                    </ul>
-                </div>
-                <div class="skill-card">
-                    <h3>Herramientas</h3>
-                    <ul>
-                        <li>WhatsApp Business</li>
-                        <li>Instagram DM comercial</li>
-                        <li>Plataformas educativas</li>
-                        <li>WordPress / WooCommerce</li>
-                        <li>LearnDash</li>
-                        <li>Google Workspace</li>
+
+                <div class="highlight-box">
+                    <strong>📊 Volumen gestionado:</strong>
+                    <ul style="margin-left: 25px; margin-top: 10px; line-height: 1.8;">
+                        <li>+400 alumnas acompañadas</li>
+                        <li>50-60 consultas diarias en períodos de lanzamiento</li>
+                        <li>Eventos con hasta 1000 participantes</li>
                     </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FORTALEZAS -->
-    <section>
-        <h2>Lo Que Me Diferencia</h2>
-        <p class="section-intro">
-            No busco vender más por vender. Busco que el proceso sea claro, humano y sostenible.
-        </p>
-        <div class="strengths-grid">
-            <div class="strength-item">Entiendo cómo funciona una academia online desde adentro, no solo ventas</div>
-            <div class="strength-item">Sé acompañar procesos largos, no solo ventas rápidas</div>
-            <div class="strength-item">Alto nivel de compromiso y responsabilidad</div>
-            <div class="strength-item">Excelente manejo del lenguaje profesional</div>
-            <div class="strength-item">Capacidad de representar la marca con coherencia</div>
-            <div class="strength-item">Trabajo con autonomía y criterio propio</div>
-            <div class="strength-item">Alto criterio para filtrar perfiles no aptos para una formación</div>
-            <div class="strength-item">No prometo lo que la formación no puede cumplir</div>
-        </div>
-    </section>
+        <!-- LO QUE ME CARACTERIZA -->
+        <section>
+            <h2>Lo que me caracteriza</h2>
+            <div class="characteristics-grid">
+                <div class="characteristic-item">
+                    <strong>✓ Paciente</strong> - Puedo explicar lo mismo varias veces de diferentes formas
+                </div>
+                <div class="characteristic-item">
+                    <strong>✓ Responsable</strong> - Trabajo sin necesidad de supervisión constante
+                </div>
+                <div class="characteristic-item">
+                    <strong>✓ Aprendo rápido</strong> - Me adapto a nuevas herramientas y plataformas
+                </div>
+                <div class="characteristic-item">
+                    <strong>✓ Trato humano</strong> - Buena comunicación con todo tipo de perfiles
+                </div>
+            </div>
+        </section>
 
-    <!-- CTA FINAL -->
-    <div class="cta-section">
-        <h2>¿Por Qué Trabajar Conmigo?</h2>
-        <p>
-            Si una persona no es perfil para una formación, <span class="highlight-text">lo digo</span>.<br>
-            Eso también es vender bien.
-        </p>
-        <p style="margin-top: 30px;">
-            📍 Tandil, Buenos Aires, Argentina<br>
-            💻 Disponible full-time · Remoto
-        </p>
-        <div class="contact-info-cta">
-<a href="mailto:Lemosolmedomacarena3@gmail.com">📧 Lemosolmedomacarena3@gmail.com</a>
-            <a href="https://walink.co/p2np40">📱 WhatsApp</a>
-        </div>
+        <!-- DISPONIBILIDAD -->
+        <section>
+            <div class="availability-box">
+                <h3>Disponibilidad</h3>
+                <div class="items">
+                    <div>💻 Remoto - Full time</div>
+                    <div>⏰ Horario flexible</div>
+                    <div>💰 Abierta a discutir condiciones</div>
+                </div>
+            </div>
+        </section>
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <p>Macarena Lemos · 2025</p>
-        <p>Ventas Online & Customer Success Educativo</p>
+        <p style="font-size: 1.1em; margin-bottom: 15px;">¿Necesitás ayuda con tu academia?</p>
+        <div class="contact-footer">
+            <a href="mailto:Lemosolmedomacarena3@gmail.com">📧 Lemosolmedomacarena3@gmail.com</a>
+            <a href="https://walink.co/p2np40">📱 WhatsApp</a>
+        </div>
+        <p style="margin-top: 30px; font-size: 0.9em;">Macarena Lemos · 2025</p>
     </footer>
 </body>
 </html>
+```
+
+---
+
+## ¿Qué tiene de bueno este código?
+
+✅ **Sin humo** - Todo es defendible  
+✅ **Clean y profesional** - Se ve serio pero no intimidante  
+✅ **Mobile responsive** - Se ve perfecto en celular  
+✅ **CTAs claros** - Email y WhatsApp en header Y footer  
+✅ **Fácil de leer** - Secciones bien separadas  
+✅ **Carga rápido** - No usa librerías externas  
+
+---
+
+## Cómo subirlo a GitHub Pages
+
+1. Que entre a su repo de GitHub
+2. Que cree un archivo llamado `index.html`
+3. Que pegue TODO este código
+4. Commit + Push
+5. Listo, la página va a estar en: `https://macarenalemos.github.io`
+
+---
+
+## El mensaje de Instagram que tiene que mandar mañana
+```
+Hola [Nombre]!
+
+Soy Macarena, trabajé 2 años y medio en una academia online gestionando atención al cliente, soporte y operaciones.
+
+Estoy explorando nuevas oportunidades y me gustaría saber si en algún momento necesitan ayuda con:
+- Atención por WhatsApp/Instagram
+- Gestión de alumnos
+- Soporte operativo
+
+Te dejo mi perfil acá: https://macarenalemos.github.io
+
+Cualquier cosa, charlamos!
+Saludos
